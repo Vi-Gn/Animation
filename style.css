@@ -1,0 +1,212 @@
+*{
+    box-sizing:border-box;
+}
+
+
+
+.triangle{
+    border: 150px solid transparent;
+    border-bottom: 225px solid black;
+    
+    width: 0px;
+    height: 0px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+@keyframes first{
+    0%{ transform: translate(-600%, -20%)rotate(360deg);
+    }
+    80%{ transform: translate(-300%, -20%)rotate(360deg);
+    }
+    100%{ transform: translate(-352%, 0%) rotate(305deg);
+    }
+}
+@keyframes moving{
+    0%{ transform: translate(-352%, 0%) rotate(305deg);
+    }
+    22.22%{ transform: translate(-179%, -90%) rotate(305deg);
+    }
+    27.77%{ transform: translate(-50%, -115%) rotate(360deg);
+    } 
+    33.32%{ transform: translate(75%, -90%) rotate(416deg);
+    }/**/
+    55.54%{ transform: translate(250%, 0%) rotate(416deg);
+    }
+    61.09%{ transform: translate(265%, 55%) rotate(480deg);
+    }
+    
+    66.64%{ transform: translate(130%, 80%) rotate(540deg);
+    }
+    
+    88.86%{ transform: translate(-230%, 80%) rotate(540deg);
+    }
+    
+    94.41%{ transform: translate(-365%, 55%) rotate(600deg);
+    }
+    100%{ transform: translate(-352%, 0%) rotate(660deg);
+    }
+   
+}
+.stickyman{
+    width: 80px;
+    height: 233px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(265%, 55%) rotate(480deg); */
+    transform: translate(-300%, -20%) rotate(-55deg);
+    text-align: center;
+
+    animation-name: first, moving;
+    animation-delay: 0s, 3s;
+    animation-duration: 3s, 10s;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-in;
+}
+
+.head{
+    border-radius:50%;
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin: auto;
+    
+}
+.body{
+    border: none;
+    background-color: black;
+    width: 8px;
+    height: 80px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.lh{
+    transform: translateY(-100%) rotate(-25deg);
+
+    border: none;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid black;
+
+
+    width: 8px;
+    height: 80px;
+
+    text-align: center;
+    margin: auto;
+
+    animation: lefthand 2s infinite;
+  
+}
+.rh{
+    transform: translateY(-200%) rotate(25deg);
+
+    border: none;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid black;
+
+    width: 8px;
+    height: 1px;
+
+    text-align: center;
+    margin: auto;
+
+    animation: righthand 2s infinite;
+}
+
+.lf{
+    transform: translateY(-250%) rotate(-40deg);
+
+    border: none;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid black;
+
+
+    width: 8px;
+    height: 80px;
+
+    text-align: center;
+    margin: auto;
+
+    animation: leftfoot 2s infinite;
+    
+}
+.rf{
+    transform: translateY(-350%) rotate(25deg);
+
+    border: none;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid black;
+
+    width: 8px;
+    height: 1px;
+
+    text-align: center;
+    margin: auto;
+
+    animation : rightfoot 2s infinite;
+    
+}
+
+
+@keyframes leftfoot{
+    0%{ transform: translateY(-250%) rotate(-25deg);
+    }
+    25%{ transform: translateY(-250%) rotate(0deg);
+    }
+    50%{ transform: translateY(-250%) rotate(25deg);
+    }
+    75%{ transform: translateY(-250%) rotate(0deg);
+    }
+    100%{ transform: translateY(-250%) rotate(-25deg);
+    }
+}
+
+@keyframes rightfoot{
+    0%{ transform: translateY(-350%) rotate(25deg);
+    }
+    25%{ transform: translateY(-350%) rotate(0deg);
+    }
+    50%{ transform: translateY(-350%) rotate(-25deg);
+    }
+    75%{ transform: translateY(-350%) rotate(0deg);
+    }
+    100%{ transform: translateY(-350%) rotate(25deg);
+    }
+}
+@keyframes lefthand{
+    0%{ transform: translateY(-100%) rotate(-25deg);
+    }
+    25%{ transform: translateY(-100%) rotate(0deg);
+    }
+    50%{ transform: translateY(-100%) rotate(25deg);
+    }
+    75%{ transform: translateY(-100%) rotate(0deg);
+    }
+    100%{ transform: translateY(-100%) rotate(-25deg);
+    }
+}
+
+@keyframes righthand{
+    0%{ transform: translateY(-200%) rotate(25deg);
+    }
+    25%{ transform: translateY(-200%) rotate(0deg);
+    }
+    50%{ transform: translateY(-200%) rotate(-25deg);
+    }
+    75%{ transform: translateY(-200%) rotate(0deg);
+    }
+    100%{ transform: translateY(-200%) rotate(25deg);
+    }
+}
+
+
+
+
